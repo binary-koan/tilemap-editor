@@ -1,12 +1,42 @@
 @import "ui-variables";
 
 .tileset-editor {
+  .tileset-preview {
+    position: relative;
+    width: 40%;
+    background: @app-background-color;
+
+    &.empty p {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      line-height: 0;
+      text-align: center;
+      font-size: 2em;
+      color: @text-color-subtle;
+    }
+  }
+
   .options {
     padding: @component-padding;
     overflow-y: auto;
 
     .control-group {
       margin-bottom: @component-padding;
+    }
+
+    .controls {
+      display: flex;
+      flex-direction: row;
+
+      .input {
+        flex: 1;
+      }
+
+      button {
+        margin-left: (@component-padding / 2);
+      }
     }
 
     atom-text-editor.mini {
