@@ -1,0 +1,48 @@
+@import "ui-variables";
+
+.tile-editor {
+  // Utilities
+
+  .hidden {
+    display: none;
+  }
+
+  .pull-right {
+    float: right;
+  }
+
+  .btn.active {
+    color: @text-color-highlight;
+  }
+
+  // Scaffolding
+
+  > div {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .toolbar {
+    padding: (@component-padding / 2);
+
+    .btn-group {
+      margin-right: @component-padding;
+    }
+  }
+
+  .main {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+
+    .sidebar {
+      width: 300px;
+      background-color: grey;
+    }
+
+    .content {
+      flex: 1;
+    }
+  }
+}
