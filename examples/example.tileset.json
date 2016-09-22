@@ -3,10 +3,10 @@
   "image": "sheet.png",
   "imagewidth": 192,
   "imageheight": 192,
-  "tilewidth": "32",
-  "tileheight": "32",
-  "margin": "0",
-  "spacing": "0",
+  "tilewidth": "16",
+  "tileheight": "16",
+  "margin": 0,
+  "spacing": 0,
   "collision": [],
   "terrain": {}
 }

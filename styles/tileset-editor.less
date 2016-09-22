@@ -3,7 +3,7 @@
 .tileset-editor {
   .tileset-preview {
     position: relative;
-    width: 40%;
+    width: 60%;
     background: @app-background-color;
 
     &.empty p {
@@ -15,6 +15,23 @@
       text-align: center;
       font-size: 2em;
       color: @text-color-subtle;
+    }
+
+    .tile.static-preview {
+      position: relative;
+
+      &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+      }
+
+      &:hover:after {
+        background-color: rgba(255, 255, 255, .5);
+      }
     }
   }
 
