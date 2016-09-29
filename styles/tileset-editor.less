@@ -2,43 +2,78 @@
 
 .tileset-editor {
   .tileset-preview {
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     width: 60%;
+    padding: (@component-padding / 2);
     background: @app-background-color;
 
     &.empty p {
-      position: absolute;
-      top: 50%;
-      left: 0;
-      right: 0;
-      line-height: 0;
       text-align: center;
       font-size: 2em;
       color: @text-color-subtle;
     }
 
-    .tile.static-preview {
-      position: relative;
+    .scroll-container {
+      flex: 1;
+      overflow: auto;
+      text-align: center;
 
-      &:after {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
+      .tileset {
+        margin: 0 auto;
       }
 
-      &:hover:after {
-        background-color: rgba(255, 255, 255, .5);
+      .tile-row {
+        display: flex;
+        flex-direction: row;
+      }
+
+      .tile.static-preview {
+        position: relative;
+        text-align: center;
+        image-rendering: pixelated;
+
+        &:after {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+        }
+
+        &:hover:after {
+          background-color: rgba(255, 255, 255, .5);
+        }
+      }
+    }
+
+    .toolbar {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-end;
+      padding-top: (@component-padding / 2);
+
+      .btn {
+        padding-left: @component-padding;
+        padding-right: @component-padding;
+      }
+
+      span {
+        display: inline-block;
+        margin: 0 @component-padding;
       }
     }
   }
 
-  .options {
+  .content {
     padding: @component-padding;
     overflow-y: auto;
+  }
 
+  .options {
     .control-group {
       margin-bottom: @component-padding;
     }
