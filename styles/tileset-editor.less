@@ -147,4 +147,43 @@
       background-color: @input-background-color;
     }
   }
+
+  .terrain {
+    display: flex;
+    flex-direction: column;
+
+    .terrain-list {
+      flex: 1;
+      padding: @component-padding;
+      border-radius: @component-border-radius;
+      background: @base-background-color;
+
+      li {
+        list-style-type: none;
+        padding: (@component-padding / 2);
+        border-radius: @component-border-radius;
+
+        &.active {
+          background: @pane-item-background-color;
+        }
+      }
+
+      a {
+        color: @text-color;
+      }
+
+      a:hover, a:focus {
+        text-decoration: none;
+        color: @text-color-highlight;
+      }
+    }
+
+    .terrain-toolbar {
+      padding-top: (@component-padding / 2);
+
+      .btn {
+        margin-right: (@component-padding / 2);
+      }
+    }
+  }
 }

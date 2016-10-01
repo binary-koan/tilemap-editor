@@ -297,5 +297,18 @@
     0,
     0
   ],
-  "terrain": {}
+  "terrain": [
+    {
+      "name": "Untitled",
+      "tiles": {}
+    },
+    {
+      "name": "Untitled",
+      "tiles": {}
+    },
+    {
+      "name": "Untitled",
+      "tiles": {}
+    }
+  ]
 }
