@@ -299,11 +299,23 @@
   ],
   "terrain": [
     {
-      "name": "Untitled",
+      "name": "Water - Grass",
       "tiles": {}
     },
     {
-      "name": "Untitled",
+      "name": "Water - Dirt",
+      "tiles": {}
+    },
+    {
+      "name": "Dirt - Grass",
+      "tiles": {}
+    },
+    {
+      "name": "Dark Dirt - Dirt",
+      "tiles": {}
+    },
+    {
+      "name": "Dark Dirt - Grass",
       "tiles": {}
     },
     {

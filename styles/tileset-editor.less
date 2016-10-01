@@ -1,3 +1,5 @@
+@ui-accent: @base-border-color; // Default, for those without Isotope UI
+
 @import "ui-variables";
 
 .tileset-editor {
@@ -159,6 +161,8 @@
       background: @base-background-color;
 
       li {
+        display: flex;
+        flex-direction: row;
         list-style-type: none;
         padding: (@component-padding / 2);
         border-radius: @component-border-radius;
@@ -175,6 +179,15 @@
       a:hover, a:focus {
         text-decoration: none;
         color: @text-color-highlight;
+      }
+
+      input {
+        flex: 1;
+        font: inherit;
+        padding: (@component-padding / 2);
+        background-color: @pane-item-background-color;
+        border: 1px solid @ui-accent;
+        border-radius: @component-border-radius;
       }
     }
 
